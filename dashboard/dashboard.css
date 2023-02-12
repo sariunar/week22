@@ -1,0 +1,154 @@
+.container{    
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-areas:
+      "sidebar main main main";
+    height: 100vh;
+}
+#sidebar{
+    grid-area: sidebar;
+    height: 100%;
+    color: #000000;
+    margin: 30px;
+}
+.sidebar__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.project__title{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#project__select{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(243, 243, 243);
+    width: 90%;
+    height: 40px;
+    margin-bottom: 20px;
+}
+#project__select:focus{
+    outline: none;
+}
+.material-icons-outlined{
+    margin-right: 10px;
+}
+.sidebar__title-icon{
+    color: rgb(100, 36, 160);
+}
+.sidebar__list {
+    padding: 0;
+    margin-top: 15px;
+    list-style-type: none;
+}
+.sidebar__list-item a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.sidebar__list-item span{
+    color: rgb(126, 126, 126);
+}
+.sidebar__list-item a:hover{
+    color: blueviolet;
+}
+.material-icons-outlined:hover{
+    color: blueviolet;
+}
+.add__task{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 40px;
+}
+.main{
+    grid-area: main;
+    background-color: rgb(245, 245, 245);
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr 1fr;
+    grid-template-areas:
+      "main__header" "main__about" "main__activity" "main__score";
+}
+.main__header{
+    grid-area: main__header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__about{
+    grid-area: main__about;
+    display: grid;
+    grid-template-columns: 1fr 50%;
+    grid-template-areas: "about__you about__img";
+    background-color: rgb(216, 186, 181);
+    border-radius: 40px;
+    margin: 20px;
+}
+.about__you{
+    grid-area: about__you;
+    margin: 40px;
+    color: rgb(145, 34, 53);
+}
+.about__you button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    color: rgb(145, 34, 53);
+    cursor: pointer;
+}
+.about__img{
+    grid-area: about__img;
+}
+.about__img img{
+    width: 20%;
+}
+.about__you-name{
+    font-size: 1.7em;
+    font-weight: 600;
+}
+.about__you-inf{
+    font-size: 1.2em;
+    line-height: 40px;
+}
+.main__activity{
+    grid-area: main__activity;
+    background-color: white;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin: 20px;
+}
+.main__score{
+    grid-area: main__score;
+}
+.main__score-tasks{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    padding: 20px;
+    gap: 20px;
+}
+.bar_chart{
+    background-color: white;
+    border-radius: 40px;
+    
+}
+.line_chart{
+    height: 70%;
+    margin: 20px;
+}
+.main__title{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 20px;
+    padding-top: 20px;
+}
+.date{
+    font-size: 1em;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}

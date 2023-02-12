@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <aside id="sidebar">
+            <div class="sidebar__title">
+                <span class="material-icons-outlined sidebar__title-icon">group_work</span>
+                <span>Collab.io</span> 
+            </div>
+            <div class="project">
+                <p class="project__title">Project</p> 
+                <select id="project__select">
+                    <option value="">More Projects</option>
+                    <option value="">Project 1</option>
+                    <option value="">Project 2</option>
+                    <option value="">Project 3</option>
+                    <option value="">Project 4</option>
+                    <option value="">Project 5</option>
+                </select>
+            </div>
+            <ul class="sidebar__list">
+                <li class="sidebar__list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">dashboard</span> Dashboard
+                    </a>
+                </li>
+                <li class="sidebar__list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">track_changes</span> Backlog
+                    </a>
+                </li>
+                <li class="sidebar__list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">view_timeline</span> Active Sprint
+                    </a>
+                </li>
+                <li class="sidebar__list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">poll</span> Reports
+                    </a>
+                </li>
+                <li class="sidebar__list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">description</span> Pages
+                    </a>
+                </li>
+                <li class="sidebar__list-item">
+                    <a href="#" target="_blank">
+                        <span class="material-icons-outlined">settings</span> Setting
+                    </a>
+                </li>
+            </ul>
+            <div class="add__task">Add New Task</div>
+        </aside>
+        <main class="main">
+            <div class="main__header">
+                <div>
+                    <p class="main__title">Dashboard</p>
+                    <p class="date"></p>
+                </div>
+                <div>calendare</div>
+            </div>
+            <div class="main__about">
+                <div class="about__you">
+                    <p class="about__you-name">Welcome</p>
+                    <p class="about__you-name">Izabella Tabakova</p>
+                    <p class="about__you-inf">You have 2 project to finish and already completed 68% from your monthly level.Keep going to your goal.</p>
+                    <button>More</button>
+                </div>
+                <div class="about__img">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="main__activity">
+                <div class="line_chart">
+                    <p class="main__title">Weekly activity</p>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="main__score">
+                <p class="main__title">Tasks</p>
+                <div class="main__score-tasks">
+                    <div class="bar_chart">
+                        <canvas id="myChart2"></canvas>
+                    </div>
+                    <div class="bar_chart">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
