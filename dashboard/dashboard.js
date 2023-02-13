@@ -1,22 +1,5 @@
 const Chart = require('chart.js/auto');
 const ctx = document.getElementById('myChart');
-const Choreographer = require('choreographer-js');
-
-let choreographer = new Choreographer({
-    animations: [
-        {
-            range: [-1, window.innerHeight * 4],
-            selector: '#box',
-            type: 'scale',
-            style: 'opacity',
-            from: 0.1,
-            to: 1
-        }
-    ]
-})
-window.addEventListener('scroll', () => {
-    choreographer.runAnimationsAt(window.pageYOffset)
-})
 
 const data = {
     labels: ['', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun', ''],
@@ -34,12 +17,6 @@ const config = {
     data: data,
 };
 new Chart(ctx, config);
-
-
-let date = document.querySelector('.date');
-date.innerText = new Date().toLocaleDateString('en-US', { weekday: 'long', year: "numeric", month: 'long', day: 'numeric' });
-
-
 
 const ctx2 = document.getElementById('myChart2');
 const data2 = {
@@ -86,4 +63,11 @@ const data3 = {
     }
 };
 new Chart(ctx3, data3);
+
+
+
+const moment = require('moment');
+let date = document.querySelector('.date');
+date = moment();
+date.innerText = now.format('dddd, MMMM DD YYYY');
 
